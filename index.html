@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>人物一覧</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: white;
+    }
+
+    /* 人物一覧 */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+
+    /* 人物のマス */
+    .person {
+      height: 350px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 18px;
+      background: #f5f5f5;
+
+      cursor: pointer;
+    }
+
+    /* 写真を表示する画面 */
+    .photo-page {
+      display: none;
+
+      height: 100vh;
+
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* 写真 */
+    .photo-page img {
+      max-width: 100%;
+      max-height: 100vh;
+      object-fit: contain;
+    }
+
+    /* 戻るボタン */
+    .back {
+      position: fixed;
+
+      top: 10px;
+      left: 10px;
+
+      padding: 8px 14px;
+
+      border: none;
+      border-radius: 5px;
+
+      background: black;
+      color: white;
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- 人物一覧 -->
+
+  <div id="list" class="grid">
+
+    <div class="person" onclick="showPhoto(1)">
+      会田 葵(アイダ アオイ)
+    </div>
+
+    <div class="person" onclick="showPhoto(2)">
+      泉谷 宗汰(イズタニ ソウタ)
+    </div>
+
+    <div class="person" onclick="showPhoto(3)">
+      市岡 佑梨菜(イチオカ ユリナ)
+    </div>
+
+    <div class="person" onclick="showPhoto(4)">
+      上野 さくら(ウエノ サクラ)
+    </div>
+
+    <div class="person" onclick="showPhoto(5)">
+      大塚 稜乃(オオツカ リノ)
+    </div>
+
+    <div class="person" onclick="showPhoto(6)">
+      大野 萌衣(オオノ メイ)
+    </div>
+
+    <div class="person" onclick="showPhoto(7)">
+      菅原 月碧(スガワラ ルイ)
+    </div>
+
+    <div class="person" onclick="showPhoto(8)">
+      椙山 真衣(スギヤマ マイ)
+    </div>
+
+    <div class="person" onclick="showPhoto(9)">
+      鈴木 彩花(スズキ アヤカ)
+    </div>
+
+    <div class="person" onclick="showPhoto(10)">
+      田中 大翔(タナカ ヒロト)
+    </div>
+
+    <div class="person" onclick="showPhoto(11)">
+      根津 柚花(ネヅ ユズカ)
+    </div>
+
+    <div class="person" onclick="showPhoto(12)">
+      東久保 結衣(ヒガシクボ ユイ)
+    </div>
+
+    <div class="person" onclick="showPhoto(13)">
+      村山 美緒梨
+    </div>
+
+    <div class="person" onclick="showPhoto(14)">
+      先生:水野 学(ミズノ マナブ)
+    </div>
+
+  </div>
+
+
+  <!-- 写真表示画面 -->
+
+  <div id="photoPage" class="photo-page">
+
+    <button class="back" onclick="backToList()">
+      ← 戻る
+    </button>
+
+    <img id="photo" src="" alt="人物写真">
+
+  </div>
+
+
+  <script>
+
+    /* 人物をタップしたとき */
+
+    function showPhoto(number) {
+
+      // 人物一覧を隠す
+      document.getElementById("list").style.display = "none";
+
+      // 写真画面を表示
+      document.getElementById("photoPage").style.display = "flex";
+
+      // 写真を表示
+      document.getElementById("photo").src =
+        "images/person" + number + ".jpg";
+    }
+
+
+    /* 戻るボタンを押したとき */
+
+    function backToList() {
+
+      // 写真画面を隠す
+      document.getElementById("photoPage").style.display = "none";
+
+      // 人物一覧を表示
+      document.getElementById("list").style.display = "grid";
+
+    }
+
+  </script>
+
+</body>
+
+</html>
