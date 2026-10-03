@@ -22,7 +22,7 @@
     body {
       margin: 0;
       font-family: sans-serif;
-      background: #75BFF3; /* 全体の背景色を追加・変更 */
+      background: #75BFF3;
     }
 
     /* 人物一覧 */
@@ -43,8 +43,12 @@
       align-items: center;
       justify-content: center;
 
-      font-size: 18px;
-      background: #ffffff; /* マスを完全な白色にする場合は #ffffff、元のうすいグレーなら #f5f5f5 のままでもOKです */
+      text-align: center;
+      line-height: 1.4;
+
+      font-size: 22px;
+      font-weight: bold;
+      font-family: "Hiragino Sans", "ヒラギノ角ゴ ProN", "Meiryo", sans-serif;
 
       cursor: pointer;
     }
@@ -92,60 +96,61 @@
 
   <div id="list" class="grid">
 
-    <div class="person" onclick="showPhoto(1)">
-      会田 葵(アイダ アオイ)
+    <!-- style="background: 色コード;" で個別に背景色を指定 -->
+    <div class="person" style="background: #FFD1DC;" onclick="showPhoto(1)">
+      会田 葵<br>(アイダ アオイ)
     </div>
 
-    <div class="person" onclick="showPhoto(2)">
-      泉谷 宗汰(イズタニ ソウタ)
+    <div class="person" style="background: #FFE5B4;" onclick="showPhoto(2)">
+      泉谷 宗汰<br>(イズタニ ソウタ)
     </div>
 
-    <div class="person" onclick="showPhoto(3)">
-      市岡 佑梨菜(イチオカ ユリナ)
+    <div class="person" style="background: #FFF9A6;" onclick="showPhoto(3)">
+      市岡 佑梨菜<br>(イチオカ ユリナ)
     </div>
 
-    <div class="person" onclick="showPhoto(4)">
-      上野 さくら(ウエノ サクラ)
+    <div class="person" style="background: #D4F0F0;" onclick="showPhoto(4)">
+      上野 さくら<br>(ウエノ サクラ)
     </div>
 
-    <div class="person" onclick="showPhoto(5)">
-      大塚 稜乃(オオツカ リノ)
+    <div class="person" style="background: #E2F0CB;" onclick="showPhoto(5)">
+      大塚 稜乃<br>(オオツカ リノ)
     </div>
 
-    <div class="person" onclick="showPhoto(6)">
-      大野 萌衣(オオノ メイ)
+    <div class="person" style="background: #E6E6FA;" onclick="showPhoto(6)">
+      大野 萌衣<br>(オオノ メイ)
     </div>
 
-    <div class="person" onclick="showPhoto(7)">
-      菅原 月碧(スガワラ ルイ)
+    <div class="person" style="background: #FCE1E4;" onclick="showPhoto(7)">
+      菅原 月碧<br>(スガワラ ルイ)
     </div>
 
-    <div class="person" onclick="showPhoto(8)">
-      椙山 真衣(スギヤマ マイ)
+    <div class="person" style="background: #FCF6BD;" onclick="showPhoto(8)">
+      椙山 真衣<br>(スギヤマ マイ)
     </div>
 
-    <div class="person" onclick="showPhoto(9)">
-      鈴木 彩花(スズキ アヤカ)
+    <div class="person" style="background: #D0F4DE;" onclick="showPhoto(9)">
+      鈴木 彩花<br>(スズキ アヤカ)
     </div>
 
-    <div class="person" onclick="showPhoto(10)">
-      田中 大翔(タナカ ヒロト)
+    <div class="person" style="background: #A9DEF9;" onclick="showPhoto(10)">
+      田中 大翔<br>(タナカ ヒロト)
     </div>
 
-    <div class="person" onclick="showPhoto(11)">
-      根津 柚花(ネヅ ユズカ)
+    <div class="person" style="background: #E4C1F9;" onclick="showPhoto(11)">
+      根津 柚花<br>(ネヅ ユズカ)
     </div>
 
-    <div class="person" onclick="showPhoto(12)">
-      東久保 結衣(ヒガシクボ ユイ)
+    <div class="person" style="background: #FFD97D;" onclick="showPhoto(12)">
+      東久保 結衣<br>(ヒガシクボ ユイ)
     </div>
 
-    <div class="person" onclick="showPhoto(13)">
-      村山 美緒梨(ムラヤマ ミオリ)
+    <div class="person" style="background: #FFCAD4;" onclick="showPhoto(13)">
+      村山 美緒梨<br>(ムラヤマ ミオリ)
     </div>
 
-    <div class="person" onclick="showPhoto(14)">
-      10期生待ってるよ★
+    <div class="person" style="background: #FFFFFF;" onclick="showPhoto(14)">
+      10期生を<br>待ってるよ
     </div>
 
   </div>
