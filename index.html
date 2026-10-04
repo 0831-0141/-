@@ -4,15 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+   <title>【9期生紹介】</title>
 
-  <!-- ★ 1. ブラウザのタブや検索結果に表示されるタイトル -->
-  <title>【9期生紹介】</title>
+   <meta name="description" content="【説明会来てくれてありがとう】">
 
-  <!-- ★ 2. 検索結果や共有時に表示される説明文 -->
-  <meta name="description" content="【説明会来てくれてありがとう】">
-
-  <!-- ★ 3. LINEやSNSで共有したときの表示（OGP設定） -->
-  <meta property="og:title" content="【9期生を紹介するよ】">
+    <meta property="og:title" content="【9期生を紹介するよ】">
   <meta property="og:description" content="【9期生を紹介するよ】">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://0831-0141.github.io/-/">
@@ -170,6 +167,12 @@
 
 
   <script>
+
+var password = prompt("パスワードを入力してください：");
+  if (password !== "0913") { // ←「0913」をお好みのパスワードに変更してください
+    alert("個別説明会においで★");
+    document.body.innerHTML = "<h2 style='text-align:center; padding-top:50px;'>閲覧権限がありません</h2>";
+  }
 
     /* 人物をタップしたとき */
 
