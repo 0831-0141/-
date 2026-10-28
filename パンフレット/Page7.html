@@ -1,221 +1,57 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-   <title>【9期生紹介】</title>
-
-   <meta name="description" content="【説明会来てくれてありがとう】">
-
-    <meta property="og:title" content="【9期生を紹介するよ】">
-  <meta property="og:description" content="【9期生を紹介するよ】">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://0831-0141.github.io/-/">
-
-  <style>
-
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #75BFF3;
-    }
-
-    /* 人物一覧 */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      padding: 10px;
-    }
-
-    /* 人物のマス */
-    .person {
-      height: 350px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-align: center;
-      line-height: 1.4;
-
-      font-size: 22px;
-      font-weight: bold;
-      font-family: "Hiragino Sans", "ヒラギノ角ゴ ProN", "Meiryo", sans-serif;
-
-      cursor: pointer;
-    }
-
-    /* 写真を表示する画面 */
-    .photo-page {
-      display: none;
-
-      height: 100vh;
-
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* 写真 */
-    .photo-page img {
-      max-width: 100%;
-      max-height: 100vh;
-      object-fit: contain;
-    }
-
-    /* 戻るボタン */
-    .back {
-      position: fixed;
-
-      top: 10px;
-      left: 10px;
-
-      padding: 8px 14px;
-
-      border: none;
-      border-radius: 5px;
-
-      background: black;
-      color: white;
-    }
-
-  </style>
-</head>
-
-
-<body>
-
-  <!-- 9期紹介コーナー -->
-
-  <div id="list" class="grid">
-
-    <!-- style="background: 色コード;" で個別に背景色を指定 -->
-    <div class="person" style="background: #FFFCBF;" onclick="showPhoto(1)">
-      会田 葵<br>(アイダ アオイ)
-    </div>
-
-    <div class="person" style="background: #FFDEAD;" onclick="showPhoto(2)">
-      泉谷 宗汰<br>(イズタニ ソウタ)
-    </div>
-
-    <div class="person" style="background: #FEA9D4;" onclick="showPhoto(3)">
-      市岡 佑梨菜<br>(イチオカ ユリナ)
-    </div>
-
-    <div class="person" style="background: #fedd00;" onclick="showPhoto(4)">
-      上野 さくら<br>(ウエノ サクラ)
-    </div>
-
-    <div class="person" style="background: #afeeee;" onclick="showPhoto(5)">
-      大塚 稜乃<br>(オオツカ リノ)
-    </div>
-
-    <div class="person" style="background: #9acd32;" onclick="showPhoto(6)">
-      大野 萌衣<br>(オオノ メイ)
-    </div>
-
-    <div class="person" style="background: #cd5c5c;" onclick="showPhoto(7)">
-      菅原 月碧<br>(スガワラ ルイ)
-    </div>
-
-    <div class="person" style="background: #81D7D3;" onclick="showPhoto(8)">
-      椙山 真衣<br>(スギヤマ マイ)
-    </div>
-
-    <div class="person" style="background: #9370db;" onclick="showPhoto(9)">
-      鈴木 彩花<br>(スズキ アヤカ)
-    </div>
-
-    <div class="person" style="background: #DCDCDC;" onclick="showPhoto(10)">
-      田中 大翔<br>(タナカ ヒロト)
-    </div>
-
-    <div class="person" style="background: #1E90FF;" onclick="showPhoto(11)">
-      根津 柚花<br>(ネヅ ユズカ)
-    </div>
-
-    <div class="person" style="background: #FFA500;" onclick="showPhoto(12)">
-      東久保 結衣<br>(ヒガシクボ ユイ)
-    </div>
-
-    <div class="person" style="background: #FF69B4;" onclick="showPhoto(13)">
-      村山 美緒梨<br>(ムラヤマ ミオリ)
-    </div>
-
-    <div class="person" style="background: #FFFFF0;" onclick="showPhoto(14)">
-      10期生を<br>待ってるよ★
-    </div>
-
-  </div>
-
-
-  <!-- 写真表示画面 -->
-
-  <div id="photoPage" class="photo-page">
-
-    <button class="back" onclick="backToList()">
-      ← 戻る
-    </button>
-
-    <img id="photo" src="" alt="人物写真">
-
-  </div>
-
-
-  <script>
-
-var password = prompt("興味持ってくれてありがとう！個別説明会で言われたパスワード入れてね♡");
-  if (password !== "0913") { // ←「0913」をお好みのパスワードに変更してください
-    alert("個別説明会においで★");
-    document.body.innerHTML = "<h2 style='text-align:center; padding-top:50px;'>閲覧権限がありません</h2>";
-  }
-
-    /* 人物をタップしたとき */
-
-    function showPhoto(number) {
-
-      // 人物一覧を隠す
-      document.getElementById("list").style.display = "none";
-
-      // 写真画面を表示
-      document.getElementById("photoPage").style.display = "flex";
-
-      // 写真を表示
-      document.getElementById("photo").src =
-        "images/person" + number + ".jpg";
-    }
-
-
-    /* 戻るボタンを押したとき */
-
-    function backToList() {
-
-      // 写真画面を隠す
-      document.getElementById("photoPage").style.display = "none";
-
-      // 人物一覧を表示
-      document.getElementById("list").style.display = "grid";
-
-    }
-
-  </script>
-<div style="text-align: center; margin: 30px auto;">
-  <a href="home.html" style="
-    display: inline-block;
-    padding: 12px 28px;
-    background-color: #E8D8C3;
-    color: #C49A32;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 1px solid #D8C5AE;
-  ">トップページへ戻る</a>
+<!DOCTYPE html> <html lang="ja"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="robots" content="noindex, nofollow"> <title>【9期生紹介】</title> <meta name="description" content="【説明会来てくれてありがとう】"> <meta property="og:title" content="【9期生を紹介するよ】"> <meta property="og:description" content="【9期生を紹介するよ】"> <meta property="og:type" content="website"> <meta property="og:url" content="https://0831-0141.github.io/-/"> <style> * { box-sizing: border-box; } html, body { margin: 0; padding: 0; font-family: sans-serif; background: #75BFF3; } body { min-height: 100vh; } .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding: 10px; } .person { height: 350px; border: 1px solid #ccc; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.4; font-size: 22px; font-weight: bold; font-family: "Hiragino Sans", "ヒラギノ角ゴ ProN", "Meiryo", sans-serif; cursor: pointer; } .photo-page { display: none; min-height: 100vh; width: 100%; align-items: center; justify-content: center; position: relative; } .photo-page img { display: block; max-width: 100%; max-height: 100vh; object-fit: contain; } .back { position: fixed; top: 10px; left: 10px; z-index: 10; padding: 8px 14px; border: none; border-radius: 5px; background: black; color: white; cursor: pointer; font-size: 16px; } .home-button { text-align: center; margin: 30px auto; } .home-button a { display: inline-block; padding: 12px 28px; background-color: #E8D8C3; color: #C49A32; text-decoration: none; font-weight: bold; border-radius: 10px; border: 1px solid #D8C5AE; } @media (max-width: 600px) { .person { height: 250px; font-size: 18px; } } </style> </head> <body> <div id="list" class="grid">
+<div class="person" style="background: #FFFCBF;" onclick="showPhoto(1)">
+  会田 葵<br>(アイダ アオイ)
 </div>
 
-</body>
+<div class="person" style="background: #FFDEAD;" onclick="showPhoto(2)">
+  泉谷 宗汰<br>(イズタニ ソウタ)
+</div>
 
-</html>
+<div class="person" style="background: #FEA9D4;" onclick="showPhoto(3)">
+  市岡 佑梨菜<br>(イチオカ ユリナ)
+</div>
+
+<div class="person" style="background: #fedd00;" onclick="showPhoto(4)">
+  上野 さくら<br>(ウエノ サクラ)
+</div>
+
+<div class="person" style="background: #afeeee;" onclick="showPhoto(5)">
+  大塚 稜乃<br>(オオツカ リノ)
+</div>
+
+<div class="person" style="background: #9acd32;" onclick="showPhoto(6)">
+  大野 萌衣<br>(オオノ メイ)
+</div>
+
+<div class="person" style="background: #cd5c5c;" onclick="showPhoto(7)">
+  菅原 月碧<br>(スガワラ ルイ)
+</div>
+
+<div class="person" style="background: #81D7D3;" onclick="showPhoto(8)">
+  椙山 真衣<br>(スギヤマ マイ)
+</div>
+
+<div class="person" style="background: #9370db;" onclick="showPhoto(9)">
+  鈴木 彩花<br>(スズキ アヤカ)
+</div>
+
+<div class="person" style="background: #DCDCDC;" onclick="showPhoto(10)">
+  田中 大翔<br>(タナカ ヒロト)
+</div>
+
+<div class="person" style="background: #1E90FF;" onclick="showPhoto(11)">
+  根津 柚花<br>(ネヅ ユズカ)
+</div>
+
+<div class="person" style="background: #FFA500;" onclick="showPhoto(12)">
+  東久保 結衣<br>(ヒガシクボ ユイ)
+</div>
+
+<div class="person" style="background: #FF69B4;" onclick="showPhoto(13)">
+  村山 美緒梨<br>(ムラヤマ ミオリ)
+</div>
+
+<div class="person" style="background: #FFFFF0;" onclick="showPhoto(14)">
+  10期生を<br>待ってるよ★
+</div>
+</div> <div id="photoPage" class="photo-page"> <button class="back" onclick="backToList()">← 戻る</button> <img id="photo" src="" alt="人物写真"> </div> <script> var password = prompt("興味持ってくれてありがとう！個別説明会で言われたパスワード入れてね♡"); if (password !== "0913") { alert("個別説明会においで★"); document.body.innerHTML = "<h2 style='text-align:center; padding-top:50px;'>閲覧権限がありません</h2>"; } function showPhoto(number) { if (number < 1 || number > 13) { return; } document.getElementById("list").style.display = "none"; document.querySelector(".home-button").style.display = "none"; document.getElementById("photoPage").style.display = "flex"; var photo = document.getElementById("photo"); photo.src = "images/Person" + number + ".jpg"; photo.onerror = function() { alert("写真が見つかりません。ファイル名と保存場所を確認してください。\nimages/Person" + number + ".jpg"); }; } function backToList() { document.getElementById("photoPage").style.display = "none"; document.getElementById("list").style.display = "grid"; document.querySelector(".home-button").style.display = "block"; } </script> <div class="home-button"> <a href="home.html">トップページへ戻る</a> </div> </body> </html>
